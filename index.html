@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asset/css/stylesheet.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PROF-ELECT-WS101</title>
+    <title>Material</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <!-- Material Font -->
+    <link rel="stylesheet" href="./assets/css/material-font.css">
+    <!-- Mobile Support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-
-
-<body >
-    <div class =" Page" >
-    <a href="index.html">Home</a> &NonBreakingSpace;
-    <a href="about.html">About</a> &NonBreakingSpace;
-    <a href="login.html">LogIn</a>
-   </div>
-    
-
-  
-</script>
+<body>
+             
+    <nav>
+        <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Aldrin John B. Matayabas</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Profile.html">Profile</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+           <li><a href="logout.html">logout</a></li>
+        </ul>
+        </div>
+    </nav>
+    <!-- Material JS -->
+    <script src="./assets/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems);
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+    </script>
 </body>
 </html>
