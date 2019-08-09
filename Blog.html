@@ -24,6 +24,7 @@
           </ul>
         </div>
       </nav>
+
       <!-- Modal Trigger -->
   <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
@@ -53,12 +54,11 @@
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems);
         var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);    
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
+        var instances = M.Sidenav.init(elems);
+        var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, options);
-  });
+    });
+   
     </script>
 </body>
 </html>
