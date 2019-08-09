@@ -26,6 +26,9 @@
           </ul>
         </div>
       </nav>
+      <img class="materialboxed" width="650" src="images/sample-1.jpg">
+      
+     
             
     
     
@@ -40,6 +43,12 @@
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
+  });
+    
     </script>
 </body>
 </html>
