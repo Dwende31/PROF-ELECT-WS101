@@ -16,12 +16,34 @@
              
     <nav>
         <div class="nav-wrapper">
-        <a href="#" class="brand-logo"> Sanchez, Edwin T.</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a href="#" class="brand-logo right">Sanchez, Edwin T.</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="index.html">Home</a></li>
+            
         </ul>
+          </ul>
         </div>
-    </nav>
+      </nav>
+      <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  
+          
+
+
+
+
+
     <!-- Material JS -->
     <script src="./assets/js/materialize.min.js"></script>
     <script>
@@ -31,8 +53,12 @@
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems);
         var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
+        var instances = M.Sidenav.init(elems);    
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
     </script>
 </body>
 </html>
