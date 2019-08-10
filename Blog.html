@@ -11,34 +11,91 @@
     <link rel="stylesheet" href="./assets/css/material-font.css">
     <!-- Mobile Support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-             
+<hr>
+<body>            
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo right">Sanchez, Edwin T.</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
+        <div class="nav-wrapper  teal ">
+          <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
+          
+          <ul id="nav-mobile" class="left hide-on-med-and-down  ">
             
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+           <li><a href="login.html">Login</a></li>
+                          
+         
+
+         
+
         </ul>
+        </div>
+      </nav> <hr> 
+     
+      <div class="nav-content teal lighten-2">
+         
+          <ul class="tabs">
+              <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating pulse left "><i class="material-icons black-text">view_headline</i></a>
+            <li class="tab"><a class="active"href="">My Hobbies</a></li>
+            <li class="tab"><a class="active" href="">Favorites</a></li>
+            <li class="tab"><a class="active" href="">My videos</a></li>
+            <li class="tab"><a class="active" href="">gallery</a></li>
+            <li class="tab"><a class="active" href="">My Friends</a></li>
+            
           </ul>
         </div>
-      </nav>
+      <hr> 
 
-      <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-  
+      <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="./assets/img/d.jpg"> <!-- random image -->
+              <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/img/c.jpg"> <!-- random image -->
+              <div class="caption left-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/img/b.jpg"> <!-- random image -->
+              <div class="caption right-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/img/a.jpg"> <!-- random image -->
+              <div class="caption center-align">
+                <h3>This is our big Tagline!</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              </div>
+            </li>
+          </ul>
+        </div>
+            
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="./assets/img/c.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="./assets/img/me.jpeg"></a>
+          <a href="#name"><span class="white-text name">Edwin Sanchez</span></a>
+          <a href="#email"><span class="white-text email ">edwyne02@gmail.com@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons" >BS</i>Information Technology</a></li>
+        <li><a href="#">BSIT - IV</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader text-darken-2">PROF Elect</a></li>
+        <li><a class="subheader">Hello World !</a></li>
+      </ul>
           
 
 
@@ -55,9 +112,11 @@
         var instances = M.ScrollSpy.init(elems);
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
-        var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
     });
+        document.addEventListener('DOMContentLoaded', function() {
+       var elems = document.querySelectorAll('.slider');
+       var instances = M.Slider.init(elems, options);
+  });
    
     </script>
 </body>

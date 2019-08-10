@@ -7,24 +7,81 @@
     <title>Material</title>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Material Font -->
     <link rel="stylesheet" href="./assets/css/material-font.css">
     <!-- Mobile Support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
 </head>
-
-
+<hr>
 <body>
     <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo right">Sanchez, Edwin T.</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
+        <div class="nav-wrapper  teal ">
+          <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
+          
+          <ul id="nav-mobile" class="left hide-on-med-and-down  ">
             
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+           <li><a href="login.html">Login</a></li>
+                          
+         
+
+         
+
         </ul>
+        </div>
+      </nav> <hr> 
+     
+      <div class="nav-content teal lighten-2">
+         
+          <ul class="tabs">
+              <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating pulse left "><i class="material-icons black-text">view_headline</i></a>
+            <li class="tab"><a class="active"href="">My Hobbies</a></li>
+            <li class="tab"><a class="active" href="">Favorites</a></li>
+            
           </ul>
         </div>
-      </nav>
+      
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="./assets/img/c.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="./assets/img/me.jpeg"></a>
+          <a href="#name"><span class="white-text name">Edwin Sanchez</span></a>
+          <a href="#email"><span class="white-text email ">edwyne02@gmail.com@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons" >BS</i>Information Technology</a></li>
+        <li><a href="#">BSIT - IV</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader text-darken-2">PROF Elect</a></li>
+        <li><a class="subheader">Hello World !</a></li>
+      </ul>
+      <hr>
+      <ul class="collapsible">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>I'm A fourth Year Student Og Gingoog City Colleges Talking up BSIT</span></div>
+            <img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="250" src="./assets/img/me.jpeg">
+          </li>
+         
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+        </ul>
+              
+
+
     <!-- Material JS -->
     <script src="./assets/js/materialize.min.js"></script>
     <script>
@@ -35,7 +92,12 @@
         var instances = M.ScrollSpy.init(elems);
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
+
     });
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
     </script>
 </body>
 </html>

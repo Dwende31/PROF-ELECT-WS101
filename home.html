@@ -7,21 +7,17 @@
     <title>Material</title>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Material Font -->
-    <link rel="stylesheet" href="".css>
+    <link rel="stylesheet" href="./assets/css/material-font.css">
     <!-- Mobile Support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/materialize.min.css">
-    <link href="./assets/css/login-box.css" rel="stylesheet" type="text/css" />
-    <link href="./assets/js/loginjs.js" rel="stylesheet" type="text/css" />
-   
-  
-
+    
 </head>
-<hr>
 <body>
-            
+    <hr>
     <nav>
         <div class="nav-wrapper  teal ">
           <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
@@ -58,35 +54,15 @@
         <li><a class="subheader text-darken-2">PROF Elect</a></li>
         <li><a class="subheader">Hello World !</a></li>
       </ul>
-      <hr>
-
+        <hr>
      
-<link href='./assets/css/login-box.css' rel='stylesheet' type='text/css'>
-
-<div class="login">
-  <div class="login-header">
-    <h1>Login</h1>
-  </div>
-  <div class="login-form teal">
-    <h3>Username:</h3>
-    <input type="text" placeholder="Username"/><br>
-    <h3>Password:</h3>
-    <input type="password" placeholder="Password"/>
-    <br>
-    <input type="button" value="Login" class="login-button"/>
-    <br>
-    <a class="sign-up">Sign Up!</a>
-    <br>
-    <h6 class="no-access black-text ">Can't access your account?</h6>
-  </div>
-</div>
-<!---<div class="error-page">
-  <div class="try-again">Error: Try again?</div>
-</div>-->
+      
 
 
 
 
+
+    
     <!-- Material JS -->
     <script src="./assets/js/materialize.min.js"></script>
     <script>
@@ -98,6 +74,20 @@
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+    
     </script>
+    
+          
 </body>
+
 </html>
