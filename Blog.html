@@ -7,6 +7,8 @@
     <title>Material</title>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/js/script.js">
     <!-- Material Font -->
     <link rel="stylesheet" href="./assets/css/material-font.css">
     <!-- Mobile Support -->
@@ -24,7 +26,7 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Blog.html">Blog</a></li>
-           <li><a href="login.html">Login</a></li>
+            <li><button onclick="document.getElementById('id01').style.display='block'" class="teal">Login</button></li>
                           
          
 
@@ -41,49 +43,61 @@
             <li class="tab"><a class="active"href="">My Hobbies</a></li>
             <li class="tab"><a class="active" href="">Favorites</a></li>
             <li class="tab"><a class="active" href="">My videos</a></li>
-            <li class="tab"><a class="active" href="">gallery</a></li>
+            <li class="tab"><a class="active" href="">Gallery</a></li>
             <li class="tab"><a class="active" href="">My Friends</a></li>
             
           </ul>
         </div>
       <hr> 
 
-      <div class="slider">
-          <ul class="slides">
-            <li>
-              <img src="./assets/img/d.jpg"> <!-- random image -->
-              <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="./assets/img/c.jpg"> <!-- random image -->
-              <div class="caption left-align">
-                <h3>Left Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="./assets/img/b.jpg"> <!-- random image -->
-              <div class="caption right-align">
-                <h3>Right Aligned Caption</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="./assets/img/a.jpg"> <!-- random image -->
-              <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="./assets/img/1.jpg" style="width:100%"class="responsive ">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="./assets/img/2.jpg" style="width:100%"class="responsive">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 /4 </div>
+    <img src="./assets/img/3.jpg" style="width:100%"class="responsive">
+    <div class="text">Caption Three</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 /4 </div>
+    <img src="./assets/img/5.jpg" style="width:100%"class="responsive">
+    <div class="text">Caption Three</div>
+  </div> <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="./assets/img/6.jpg" style="width:100%"class="responsive">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>>
+          
             
-      <ul id="slide-out" class="sidenav">
+      <ul id="slide-out" class="sidenav teal lighten-2">
         <li><div class="user-view">
-          <div class="background">
+          <div class="background ">
             <img src="./assets/img/c.jpg">
           </div>
           <a href="#user"><img class="circle" src="./assets/img/me.jpeg"></a>
@@ -96,6 +110,85 @@
         <li><a class="subheader text-darken-2">PROF Elect</a></li>
         <li><a class="subheader">Hello World !</a></li>
       </ul>
+      <!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <img src="./assets/img/me.jpeg" class=" circle">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#e1eeed">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+<div class="main">
+
+  <h1>My BLog</h1>
+  <hr>
+  
+  <h2>PORTFOLIO</h2>
+  <p>I'm A fourth Year Student Og Gingoog City Colleges Talking up BSIT</p>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <img src="./assets/img/d.jpg" alt="Mountains" style="width:100%">
+        <h3>My Work</h3>
+        <p>Lorem ipsum..</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./assets/img/c.jpg" alt="Lights" style="width:100%">
+        <h3>My Work</h3>
+        <p>Lorem ipsum..</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./assets/img/b.jpg" alt="Nature" style="width:100%">
+        <h3>My Work</h3>
+        <p>Lorem ipsum..</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img src="./assets/img/a.jpg" alt="nature" style="width:100%">
+        <h3>My Work</h3>
+        <p>Lorem ipsum..</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content">
+    <img src="./assets/img/4.jpg" alt="Bear" style="width:100%">
+    <h3>Some Other Work</h3>
+    <p>Lorem ipsum..</p>
+  </div>
+  
+  <!-- END MAIN -->
+  </div>
+
           
 
 
@@ -117,6 +210,43 @@
        var elems = document.querySelectorAll('.slider');
        var instances = M.Slider.init(elems, options);
   });
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+  // Get the modal
+  var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
    
     </script>
 </body>

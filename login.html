@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/materialize.min.css">
-    <link href="./assets/css/login-box.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="./assets/js/loginjs.js" rel="stylesheet" type="text/css" />
    
   
@@ -24,12 +24,13 @@
             
     <nav>
         <div class="nav-wrapper  teal ">
-          <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
+          <a href="#"class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
           <ul id="nav-mobile" class="left hide-on-med-and-down  ">           
             <li><a href="home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Blog.html">Blog</a></li>
-           <li><a href="login.html">Login</a></li>
+            <li><button onclick="document.getElementById('id01').style.display='block'" class="teal">Login</button></li>
+          
 
         </ul>
         </div>
@@ -43,7 +44,7 @@
           </ul>
         </div>
        
-      <ul id="slide-out" class="sidenav">
+      <ul id="slide-out" class="sidenav teal lighten-2">
         <li><div class="user-view">
           <div class="background">
             <img src="./assets/img/c.jpg">
@@ -60,29 +61,36 @@
       </ul>
       <hr>
 
-     
-<link href='./assets/css/login-box.css' rel='stylesheet' type='text/css'>
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
 
-<div class="login">
-  <div class="login-header">
-    <h1>Login</h1>
-  </div>
-  <div class="login-form teal">
-    <h3>Username:</h3>
-    <input type="text" placeholder="Username"/><br>
-    <h3>Password:</h3>
-    <input type="password" placeholder="Password"/>
-    <br>
-    <input type="button" value="Login" class="login-button"/>
-    <br>
-    <a class="sign-up">Sign Up!</a>
-    <br>
-    <h6 class="no-access black-text ">Can't access your account?</h6>
-  </div>
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <img src="./assets/img/me.jpeg" class=" circle">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#e1eeed">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
 </div>
-<!---<div class="error-page">
-  <div class="try-again">Error: Try again?</div>
-</div>-->
 
 
 
@@ -98,6 +106,16 @@
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
     });
-    </script>
+   
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
 </body>
 </html>

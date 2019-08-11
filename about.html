@@ -20,14 +20,14 @@
 <body>
     <nav>
         <div class="nav-wrapper  teal ">
-          <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>
-          
+          <a href="#" class="brand-logo right black-text text-darken-2">Bachelor Of Science In Information Technology</a>          
           <ul id="nav-mobile" class="left hide-on-med-and-down  ">
             
             <li><a href="home.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Blog.html">Blog</a></li>
-           <li><a href="login.html">Login</a></li>
+            <li><button onclick="document.getElementById('id01').style.display='block'" class="teal">Login</button></li>
+         
                           
          
 
@@ -47,7 +47,7 @@
           </ul>
         </div>
       
-      <ul id="slide-out" class="sidenav">
+      <ul id="slide-out" class="sidenav teal lighten-2">
         <li><div class="user-view">
           <div class="background">
             <img src="./assets/img/c.jpg">
@@ -65,13 +65,14 @@
       <hr>
       <ul class="collapsible">
           <li>
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-            <div class="collapsible-body"><span>I'm A fourth Year Student Og Gingoog City Colleges Talking up BSIT</span></div>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Profile</div>
+            <div class="collapsible-body"><span>Im Edwin T. Sanchez</span></div>
+            <div class="collapsible-body"><span>I'm A fourth Year Student Og Gingoog City Colleges Talking up BSIT</span></div> 
             <img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="250" src="./assets/img/me.jpeg">
           </li>
          
           <li>
-            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-header"><i class="material-icons">place</i></div>
             <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
           </li>
           <li>
@@ -80,6 +81,35 @@
           </li>
         </ul>
               
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" 
+        class="close" title="Close Modal">&times;</span>
+        
+          <!-- Modal Content -->
+          <form class="modal-content animate">
+            <div class="imgcontainer">
+              <img src="./assets/img/me.jpeg" class=" circle">
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+        
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#e1eeed">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
 
 
     <!-- Material JS -->
@@ -98,6 +128,15 @@
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, options);
   });
+  // Get the modal
+  var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     </script>
 </body>
 </html>
